@@ -1,0 +1,414 @@
+<main>
+    <!-- hero area start  -->
+    <section class="hero-area">
+    <div class="container">
+        <div class="hero-area-inner">
+        <div class="shape-1">
+            <img class="show-light" src="assets/imgs/shape/img-s-30.webp" alt="shape image">
+            <!-- <img class="show-dark" src="assets/imgs/shape/img-s-30-light.webp" alt="shape image"> -->
+        </div>
+        <!-- <div class="shape-2">
+            <img class="show-light" src="assets/imgs/shape/img-s-31.webp" alt="shape image">
+            <img class="show-dark" src="assets/imgs/shape/img-s-31-light.webp" alt="shape image">
+        </div> -->
+        <div class="section-content">
+            
+            
+            <div class="section-title-wrapper">
+            <div class="subtitle-wrapper has_fade_anim" data-fade-from="left">
+                <span class="section-subtitle">
+                <img class="show-light" src="assets/imgs/shape/img-s-29.webp" alt="shape image">
+                <img class="show-dark" src="assets/imgs/shape/img-s-29-light.webp" alt="shape image">
+                {{ homeData()?.data?.Section1Text1 }}</span>
+            </div>
+            <div class="title-wrapper">
+                <h1 class="section-title has_char_anim" data-translateX="50"><span>{{ homeData()?.data?.Section1Text2Bold }}<br>
+                    </span> {{ homeData()?.data?.Section1Text2Normal }}</h1>
+            </div>
+            </div>
+            <div class="content-last">
+                <!-- <div class="customer-box has_fade_anim" data-fade-from="left" data-delay="0.45">
+                    <div class="thumb">
+                    <img class="show-light" src="assets/imgs/team/team-group.webp" alt="team image">
+                    <img class="show-dark" src="assets/imgs/team/team-group-dark.webp" alt="team image">
+                    </div>
+                    <p class="text"><span class="text-underline">We have 18k+</span> customers
+                    word-wide</p>
+                </div> -->
+                <div class="text-wrapper">
+                    <p class="text has_fade_anim" data-delay="0.60" data-fade-from="left">
+                        {{ homeData()?.data?.Section1Text3 }}
+                    </p>
+                </div>
+                <div class="btn-wrapper has_fade_anim" data-delay="0.75" data-fade-from="bottom">
+                    <div class="wc-btn-group">
+                    <a class="wc-btn wc-btn-circle" href="contact.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="wc-btn wc-btn-primary" href="contact.html">Get started</a>
+                    <a class="wc-btn wc-btn-circle" href="contact.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- hero area end  -->
+
+    <!-- image area start  -->
+    <div class="image-area">
+    <div class="container">
+        <div class="image-area-inner">
+        <div class="image-wrapper-box">
+            <div class="video-button-box">
+            <!-- <a href="https://crowdytheme.com/assets/wp-content/uploads/2024/05/insurance-video.mp4"
+                class="wc-btn video-btn video-popup"><i class="fa-solid fa-play"></i></a> -->
+            </div>
+            <div class="image-wrapper">
+                <!-- <img class="cover" src="https://picsum.photos/1000/500" alt="gallery image"> -->
+                <img class="cover" width="1600" height="800" [src]="homeData() != null ? appService.apiUrl + homeData()?.data?.Section2Image?.url : ''" alt="team image">
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- image area end  -->
+
+    <!-- features area start  -->
+    <section class="features-area">
+    <div class="container">
+        <div class="features-area-inner">
+        <div class="features-wrapper-box">
+            <div class="features-wrapper">
+                <div class="feature-box has_fade_anim" *ngFor="let feature of homeData()?.data?.Section3Feature" data-fade-from="left" data-delay="0.15">
+                    <div class="thumb">
+                    <img [src]="appService.apiUrl + feature.Icon.url" alt="feature icon">
+                    </div>
+                    <div class="content">
+                    <h2 class="title"><span>{{ feature.TextTitle }}</span></h2>
+                    <p class="text">{{ feature.TextDescription }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- features area end  -->
+
+    <!-- services area start  -->
+    <section class="services-area">
+    <div class="container">
+        <div class="services-area-inner">
+        <div class="section-header">
+            <div class="subtitle-wrapper">
+            <span class="section-subtitle">{{ homeData()?.data?.Section4Text1 }}</span>
+            </div>
+            <div class="content-last">
+            <div class="section-title-wrapper">
+                <div class="title-wrapper">
+                <h2 class="section-title has_word_anim"><span>{{ homeData()?.data?.Section4Text2Bold }}</span>
+                    {{ homeData()?.data?.Section4Text2Normal }}</h2>
+                </div>
+            </div>
+            <div class="text-wrapper">
+                <p class="meta-text has_fade_anim" data-delay="0.15"><span>{{ homeData()?.data?.Section4Text3 }}</span></p>
+                <p class="text has_fade_anim" data-delay="0.30">{{ homeData()?.data?.Section4Text4 }}</p>
+            </div>
+            </div>
+        </div>
+        <div class="services-wrapper-box">
+            <div class="services-wrapper">
+                <div class="has_fade_anim" data-fade-from="bottom" *ngFor="let service of homeData()?.data?.Section5Service">
+                    <a href="service-details.html">
+                    <div class="service-box">
+                        <div class="bg-box">
+                        <video
+                            [src]="appService.apiUrl + homeData()?.data?.Section5Video?.url"
+                            autoplay loop></video>
+                        <div class="bg-box-overlay"></div>
+                        </div>
+                        <h3 class="title"><span>{{ service.TextTitle }}</span></h3>
+                        <div class="content">
+                        <p class="text">{{ service.TextDescription }}</p>
+                        <div class="wc-btn-group">
+                            <span class="wc-btn wc-btn-circle">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                            <span class="wc-btn wc-btn-primary">{{ service.TextEnd }}</span>
+                            <span class="wc-btn wc-btn-circle">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- services area end  -->
+
+    <!-- work area start  -->
+    <section class="work-area section-spacing-bottom">
+    <div class="container">
+        <div class="work-area-inner">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+            <div class="title-wrapper has_fade_anim">
+                <h2 class="section-title"><span>{{ homeData()?.data?.Section6Text1Normal }}</span> {{ homeData()?.data?.Section6Text1Bold }}</h2>
+            </div>
+            </div>
+        </div>
+        <div class="works-wrapper-box">
+            <div class="works-wrapper">
+
+                <a class="large" href="work-details.html">
+                    <div class="work-box has_fade_anim" data-delay="0.15" data-fade-from="left">
+                    <div class="thumb">
+                        <img [src]="homeData() != null ? appService.apiUrl + homeData()?.data!.Section6Work[0].Image.url : ''" alt="work image">
+                    </div>
+                    <div class="content">
+                        <h3 class="title"><span>{{ homeData()?.data!.Section6Work[0].TextTitle }}</span></h3>
+                        <div class="meta">
+                        <span class="tag">{{ homeData()?.data!.Section6Work[0].TextDescription }}</span>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+
+                <a href="work-details.html">
+                    <div class="work-box has_fade_anim" data-fade-from="left" data-delay="0.30">
+                    <div class="thumb">
+                        <img [src]="homeData() != null ? appService.apiUrl + homeData()?.data!.Section6Work[1].Image.url : ''" alt="work image">
+                    </div>
+                    <div class="content">
+                        <h3 class="title"><span>{{ homeData()?.data!.Section6Work[1].TextTitle }}</span></h3>
+                        <div class="meta">
+                        <span class="tag">{{ homeData()?.data!.Section6Work[1].TextDescription }}</span>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+
+                <a href="work-details.html">
+                    <div class="work-box has_fade_anim" data-fade-from="left" data-delay="0.30">
+                    <div class="thumb">
+                        <img [src]="homeData() != null ? appService.apiUrl + homeData()?.data!.Section6Work[2].Image.url : ''" alt="work image">
+                    </div>
+                    <div class="content">
+                        <h3 class="title"><span>{{ homeData()?.data!.Section6Work[2].TextTitle }}</span></h3>
+                        <div class="meta">
+                        <span class="tag">{{ homeData()?.data!.Section6Work[2].TextDescription }}</span>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="btn-wrapper has_fade_anim" data-fade-from="bottom">
+            <div class="wc-btn-group">
+            <a class="wc-btn wc-btn-circle" href="works.html">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="wc-btn wc-btn-primary" href="works.html">View more work</a>
+            <a class="wc-btn wc-btn-circle" href="works.html">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- work area end  -->
+
+    <!-- about area start  -->
+    <section class="about-area">
+    <div class="container">
+        <div class="about-area-inner">
+            <div class="section-header">
+                <div class="subtitle-wrapper">
+                <span class="section-subtitle has_fade_anim">{{ homeData()?.data?.Section7Text1 }}</span>
+                </div>
+                <div class="content-last">
+                <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                    <h2 class="section-title has_fade_anim"><span>{{ homeData()?.data?.Section7Text2 }}</span></h2>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="image-wrapper has_fade_anim" data-fade-from="top" data-fade-offset="0">
+                <img [src]="homeData() != null ? appService.apiUrl + homeData()?.data?.Section7Image1?.url : ''" alt="who we are image">
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- about area end  -->
+
+    <!-- testimonial area start  -->
+    <section class="testimonial-area">
+    <div class="container">
+        <div class="testimonial-area-inner">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+            <div class="title-wrapper">
+                <h2 class="section-title has_fade_anim"><span>{{ homeData()?.data?.Section8Text1 }}</span></h2>
+            </div>
+            </div>
+        </div>
+        <div class="testimonial-wrapper-box has_fade_anim">
+            <div class="testimonial-wrapper">
+            <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let client of homeData()?.data?.Section8Client">
+                        <div class="testimonial-item">
+                        <div class="content">
+                            <div class="icon">
+                            <img class="quote-icon show-light" src="assets/imgs/icon/quote-3.webp" alt="Quote Icon">
+                            <img class="quote-icon show-dark" src="assets/imgs/icon/quote-3-dark.webp"
+                                alt="Quote Icon">
+                            </div>
+                            <div class="text-wrapper">
+                            <p class="text">{{ client.TextDescription }}</p>
+                            </div>
+                            <div class="author">
+                            <div class="avatar">
+                                <img [src]="appService.apiUrl + client.Avatar.url" alt="image">
+                            </div>
+                            <div class="meta">
+                                <h3 class="name"><span>{{ client.Name }}</span></h3>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="testimonial-scrollbar pagination-scroll"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- testimonial area end  -->
+    
+    <!-- tools area start  -->
+    <section class="tools-area section-spacing-bottom" [style.background-image]="section9BackgroundImage()">
+    <div class="container">
+        <div class="tools-area-inner">
+            <div class="section-content">
+                <div class="section-title-wrapper">
+                <div class="title-wrapper">
+                    <h2 class="section-title has_fade_anim"><span>{{ homeData()?.data?.Section9Text1Bold }}</span> {{ homeData()?.data?.Section9Text1Normal }}</h2>
+                </div>
+                </div>
+                <div class="text-wrapper"></div>
+                <p class="text has_fade_anim" data-fade-from="left">{{ homeData()?.data?.Section9Text2 }}</p>
+                <p class="text tool-text has_fade_anim" data-fade-from="left">{{ homeData()?.data?.Section9Text3 }}</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- tools area end  -->
+
+    <!-- clients area start  -->
+    <section class="clients-area">
+    <div class="container">
+        <div class="clinets-area-inner">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+            <div class="title-wrapper">
+                <h2 class="section-title has_fade_anim"><span>{{ homeData()?.data?.Section10Text1 }}</span></h2>
+            </div>
+            </div>
+        </div>
+        <div class="clients-wrapper-box has_fade_anim">
+            <div class="clients-wrapper">
+                <div class="client-box" *ngFor="let image of homeData()?.data?.Section10Image1">
+                    <img class="show-light" [src]="appService.apiUrl + image.url" alt="client image">
+                    <img class="show-dark" [src]="appService.apiUrl + image.url" alt="client image">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- clients area end  -->
+
+    <!-- blog area start  -->
+    <section class="blog-area section-spacing-bottom pin__area">
+    <div class="container">
+        <div class="blog-area-inner">
+        <div class="section-header pin__element">
+            <div class="section-title-wrapper">
+            <div class="title-wrapper">
+                <h2 class="section-title has_fade_anim"><span>{{ homeData()?.data?.Section11Text1 }}</span></h2>
+            </div>
+            </div>
+            <div class="btn-wrapper has_fade_anim">
+            <div class="wc-btn-group">
+                <a class="wc-btn wc-btn-circle" href="blog.html">
+                <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a class="wc-btn wc-btn-primary" href="blog.html">view more blogs</a>
+                <a class="wc-btn wc-btn-circle" href="blog.html">
+                <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+        <div class="blog-wrapper-box">
+            <div class="blog-wrapper">
+                <div class="has_fade_anim" *ngFor="let insight of homeData()?.data?.Section11Insight" data-fade-from="bottom">
+                    <a href="blog-details.html">
+                    <article class="blog">
+                        <div class="author">
+                        <div class="avatar">
+                            <img [src]="appService.apiUrl + insight.Avatar.url" alt="image">
+                        </div>
+                        <div class="meta">
+                            <h3 class="name"><span>{{ insight.TextName }}</span></h3>
+                            <span class="post">{{ insight.TextPosition }}</span>
+                        </div>
+                        </div>
+                        <div class="content-wrapper">
+                        <div class="content">
+                            <div class="meta">
+                            <span class="tag">{{ insight.TextType }}</span>
+                            <span class="date has-left-line">{{ insight.TextDate }}</span>
+                            </div>
+                            <h2 class="title"><span>{{ insight.TextTitle }}</span> </h2>
+                            <p class="text">{{ insight.TextDescription }}</p>
+                        </div>
+                        <div class="btn-wrapper">
+                            <div class="wc-btn-group">
+                            <span class="wc-btn wc-btn-circle">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                            <span class="wc-btn wc-btn-primary">Read more</span>
+                            <span class="wc-btn wc-btn-circle">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                            </div>
+                        </div>
+                        </div>
+                    </article>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+    <!-- blog area end  -->
+</main>

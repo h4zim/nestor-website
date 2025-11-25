@@ -1,0 +1,58 @@
+.hero-area-inner {
+  height: 500px;
+  // padding-top: 0px;
+  // padding-bottom: 0px;
+}
+
+.hero-area-inner-long {
+  height: 700px;
+  padding-top: 100px;
+}
+
+.hero-area .section-title-small {
+  font-family: "Rubik Black";
+  font-size: 100px;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.hero-area .section-subtitle {
+  font-family: "Rubik Regular";
+  font-size: 100px;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero-area-inner {
+    height: 300px;
+  }
+
+  .hero-area-inner-long {
+    height: 400px;
+    padding-top: 100px;
+  }
+  .hero-area .section-title-small {
+    font-size: 2.5rem;
+    padding-top: 50px;
+  }
+
+  .hero-area .section-subtitle {
+    font-size: 2.5rem;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-area .section-title-small {
+    padding-top: 0px;
+  }
+
+  .hero-area .section-subtitle {
+    padding-top: 10px;
+  }
+}

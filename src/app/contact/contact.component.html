@@ -1,0 +1,90 @@
+<body class="font-heading-instumentsans-semibold">
+
+  <app-page-header></app-page-header>
+
+  <div class="has-smooth" id="has_smooth"></div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class="body-wrapper body-branding-agency">
+
+        <!-- overlay switcher close  -->
+        <div class="overlay-switcher-close"></div>
+
+        <main>
+
+          <app-page-top-short title="Have questions? We’re here to help — " subtitle="Contact us anytime"></app-page-top-short>
+          <!-- contact area start  -->
+          <section class="contact-area section-style">
+            <div class="container">
+              <div class="contact-area-inner section-spacing">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h2 class="section-title large has_fade_anim">We want to hear from you.</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-content">
+                  <div class="info-box has_fade_anim">
+                    <ul class="contact-list">
+                      <li><a>+6012 886 6577</a></li>
+                      <li><a>support&#64;nestor.com.my</a></li>
+                      <li>110A, Jalan SS 21/39, Damansara Utama, <br>
+                        47400 Petaling Jaya. Selangor.</li>
+                    </ul>
+                  </div>
+                  <div class="contact-wrap has_fade_anim" data-delay="0.30">
+                    <form action="#">
+                      <div class="contact-formwrap">
+                        <div class="contact-formfield">
+                          <input type="text" name="Name" id="Name" placeholder="Name*">
+                        </div>
+                        <div class="contact-formfield">
+                          <input type="text" name="Email" id="Email" placeholder="Email*">
+                        </div>
+                        <div class="contact-formfield">
+                          <input type="text" name="Phone" id="Phone" placeholder="Phone">
+                        </div>
+                        <div class="contact-formfield">
+                          <input type="text" name="Subject" id="Subject" placeholder="Subject*">
+                        </div>
+                        <div class="contact-formfield messages">
+                          <input type="text" name="Messages" id="Messages" placeholder="Messages*">
+                        </div>
+                      </div>
+                      <div class="section-content">
+                        <div class="row">
+                          <div class="col-lg-6 btn-wrapper has_fade_anim" data-fade-from="left">
+                            <div class="wc-btn-group">
+                              <a class="wc-btn wc-btn-circle btn-gradient thick" >
+                                <i class="fa-solid fa-arrow-right"></i>
+                              </a>
+                              <a class="wc-btn wc-btn-primary btn-gradient thick" >Send Message</a>
+                              <a class="wc-btn wc-btn-circle btn-gradient thick">
+                                <i class="fa-solid fa-arrow-right"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- contact area end  -->
+          <div class="map-container">
+            <google-map [center]="center" [zoom]="zoom" width="100%">
+              <map-marker *ngFor="let marker of markers" [position]="marker"></map-marker>
+            </google-map>
+          </div>
+          
+        </main>
+        <app-page-footer></app-page-footer>
+        
+
+      </div>
+    </div>
+  </div>
+</body>

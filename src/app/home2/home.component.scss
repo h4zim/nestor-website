@@ -1,0 +1,39 @@
+.image-area {
+    background-image: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 120px,
+        #F2F2F2 120px,
+        #F2F2F2 100%)
+}
+
+.features-area {
+    background-color: #F2F2F2;
+}
+
+.hero-area .section-content .text-wrapper {
+    margin-top: 80px;
+}
+
+.tools-area {
+    background-size: cover;
+}
+
+.tool-text {
+    margin-top: 20px;
+}
+
+.tools-area-inner {
+    padding-bottom: 40px;
+}
+
+.cover {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.hero-area .section-content .title-wrapper {
+    margin-top: 33px;
+    margin-right: 5%;
+}

@@ -1,0 +1,265 @@
+<body class="font-heading-plusjakartasans-regular" [style.visibility]="(appService.isLoading$ | async) ? 'hidden' : 'visible'">
+
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+      <div id="container" class="container-preloader">
+        <div class="animation-preloader">
+          <div class="spinner"></div>
+          <div class="txt-loading">
+            <span data-text="N" class="characters">N</span>
+            <span data-text="E" class="characters">E</span>
+            <span data-text="S" class="characters">S</span>
+            <span data-text="T" class="characters">T</span>
+            <span data-text="O" class="characters">O</span>
+            <span data-text="R" class="characters">R</span>
+          </div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+    </div> -->
+    <!-- Cursor Animation -->
+    <div class="cursor1" ></div>
+    <div class="cursor2"></div>
+
+    <!-- Sroll to top -->
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </div>
+  
+    <!-- Switcher Area Start -->
+    <!-- <div class="switcher__area">
+      <div class="switcher__icon">
+        <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+        <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="switcher__items">
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">mode</p>
+          </div>
+          <div class="switcher__btn mode-type wc-col-2">
+            <button class="active" data-mode="light">light</button>
+            <button data-mode="dark">dark</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Language Support</p>
+          </div>
+          <div class="switcher__btn lang_dir wc-col-2">
+            <button class="active" data-mode="ltr">LTR</button>
+            <button data-mode="rtl">RTL</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Layout</p>
+          </div>
+          <div class="switcher__btn layout-type wc-col-2">
+            <button class="active" data-mode="full-width">Full Width</button>
+            <button data-mode="box-layout">Box Layout</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Cursor</p>
+          </div>
+          <div class="switcher__btn">
+            <select name="cursor-style" id="cursor_style">
+              <option value="1">default</option>
+              <option selected value="2">animated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Switcher Area End -->
+  
+    <!-- offcanvas start  -->
+    <div class="offcanvas-3__area">
+      <div class="offcanvas-3__inner">
+        <div class="offcanvas-3__meta-wrapper">
+          <div class="">
+            <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="">
+            <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+              <ul>
+                <li><a href="tel:+60128866577" class="unnerline"><u>+6012 886 6577</u></a></li>
+                <li><a href="mailto:support@nestor.com.my">support&#64;nestor.com.my</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="offcanvas-3__menu-wrapper">
+          <nav class="nav-menu offcanvas-3__menu">
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="contact.html">services</a></li>
+              <li><a href="contact.html">case studies</a></li>
+              <li><a href="contact.html">blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- offcanvas end  -->
+  
+  
+    <!-- search modal start -->
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="search-template" aria-hidden="true">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form action="#" class="form-search">
+              <input type="text" placeholder="Search">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search modal end -->
+  
+    <!-- Header area start -->
+    <header class="header-area">
+      <div class="container">
+        <div class="header-area__inner">
+          <div class="header__logo">
+            <a href="#">
+              <img class="show-light" src="http://139.162.60.251/uploads/nestor_logo_1_1_525cde923d.png" alt="Site Logo">
+              <img class="show-dark" src="http://139.162.60.251/uploads/nestor_logo_1_1_525cde923d.png" alt="Site Logo">
+            </a>
+          </div>
+          <div class="header__nav pos-center">
+            <nav class="main-menu">
+              <ul>
+                <li><a href="home.html">{{ 'menu.home' | translate }}</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">services</a></li>
+                <li><a href="contact.html">blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-menu-locale">
+            <ul>
+              <li class="menu-item-has-children">
+                <a href="#">{{ lang }}</a>
+                <ul class="dp-menu">
+                  <li><a (click)="setLanguage('en')">{{ 'menu.english' | translate }}</a></li>
+                  <li><a (click)="setLanguage('zh')">{{ 'menu.chinese' | translate }}</a></li>
+                  <li><a (click)="setLanguage('bm')">{{ 'menu.bahasa' | translate }}</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="header__button">
+            <div class="wc-btn-group">
+              <a class="wc-btn wc-btn-circle" href="contact.html">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="wc-btn wc-btn-primary" href="contact.html">Get started</a>
+              <a class="wc-btn wc-btn-circle" href="contact.html">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="header__navicon d-xl-none">
+            <button onclick="showCanvas3()" class="open-offcanvas">
+              <i class="fa-solid fa-bars"></i></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header area end -->
+  
+    <!-- <div class="has-smooth" id="has_smooth"></div> -->
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+          <div class="body-wrapper body-startup-agency">
+  
+            <!-- overlay switcher close  -->
+            <div class="overlay-switcher-close"></div>
+            <!-- <app-home [homeData]="homeData"></app-home> -->
+            <router-outlet></router-outlet>
+            <!-- footer -->
+            <div class="container large">
+              <footer class="footer-area">
+                <div class="container">
+                  <div class="footer-area-inner">
+                    <div class="footer-widget-wrapper">
+                      <div class="footer-logo">
+                        <img src="http://139.162.60.251/uploads/image_76_19a9adf6b1.png" alt="site-logo">
+                      </div>
+                      <ul class="social-links">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-widget-wrapper">
+                      <h2 class="title">Service</h2>
+                      <ul class="footer-nav-list">
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Webflow</a></li>
+                        <li><a href="#">Development</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-widget-wrapper">
+                      <h2 class="title">Company</h2>
+                      <ul class="footer-nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Agency</a></li>
+                        <li><a href="#">Achievement</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-widget-wrapper newsletter">
+                      <h2 class="title">Newsletter</h2>
+                      <div class="newsletter-text">
+                        <p class="text">Feel free to reach out if you want to collaborate with us, or simply have a chat.
+                        </p>
+                      </div>
+                      <form action="#" class="subscribe-form">
+                        <div class="input-field">
+                          <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                          <input type="email" placeholder="Enter your email">
+                          <button type="submit" class="subscribe-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="copyright-area">
+                  <div class="container">
+                    <div class="copyright-area-inner">
+                      <div class="copyright-text">
+                        <p class="text">© 2024-25 <span>Nestor Professional Services(M) Sdn Bhd.(1131697-H)</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+  
+          </div>
+      </div>
+    </div>
+    
+  </body>

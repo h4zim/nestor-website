@@ -1,0 +1,29 @@
+<!-- page top start  -->
+<section class="hero-area section-item-top">
+  <div class="area-bg">
+  </div>
+  <div class="container large">
+    <div class="hero-area-inner-long" *ngIf="subtitle">
+      <div class="section-title-wrapper">
+        <div class="title-wrapper flex-column">
+          <h2 class="section-title-small">
+            {{ title }}
+          </h2>
+          <h2 class="section-subtitle">
+            {{ subtitle}}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="hero-area-inner" *ngIf="!subtitle">
+      <div class="section-title-wrapper">
+        <div class="title-wrapper d-flex flex-column">
+          <h2 class="section-title-small">
+            {{ title }}
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- page top end  -->
