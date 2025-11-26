@@ -411,12 +411,12 @@ body {
     padding-bottom: 0px;
     background-image: url('../../assets/imgs/nestor-new/background-1.png');
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
-.fun-fact-background {
-    background: linear-gradient(to bottom, rgba(96, 16, 240, 0) 50%, rgba(173, 7, 212, 0.5) 100%);
-}
+// .fun-fact-background {
+//     background: linear-gradient(to bottom, rgba(96, 16, 240, 0) 50%, rgba(173, 7, 212, 0.5) 100%);
+// }
 
 .fun-fact-area-height {
   height: calc(30vw);
@@ -508,7 +508,8 @@ body {
     font-size: 30px;
     margin-top: 2px;
     transition: all .5s;
-    color: black;
+    color: #6010F0;
+    
 }
 
 .service-box .bg-box {
@@ -541,7 +542,7 @@ body {
 }
 
 .service-box .title {
-    font-family: 'Inter Regular';
+    font-family: 'Inter Semibold';
     font-weight: 400;
     font-size: 26px;
     margin-top: 2px;
@@ -551,6 +552,10 @@ body {
 .service-box .title span {
     font-size: 40px;
     font-weight: 700;
+    color: black;
+}
+.service-box:hover .title span {
+    color: var(--white);
 }
 
 .service-box .content {
