@@ -69,22 +69,23 @@
 
   }
 
-  // 05. Smooth active
-  if (device_width > 767) {
-    setTimeout(() => {
-      if (document.querySelector("#has_smooth").classList.contains("has-smooth")) {
+// 05. Smooth active
+if (device_width > 767) {
+  setTimeout(() => {
+    const hasSmoothEl = document.querySelector("#has_smooth");
+
+    if (hasSmoothEl && hasSmoothEl.classList.contains("has-smooth")) {
       const smoother = ScrollSmoother.create({
-        smooth: 0.5,
+        smooth: 1.2,              // sebelum 0.5 → naikkan sikit
         effects: device_width < 1025 ? false : true,
-        smoothTouch: 0.5,
+        smoothTouch: 0.2,         // lagi kecil = rasa lebih natural kat touch
         normalizeScroll: true,
         ignoreMobileResize: true,
       });
     }
-    }, 500);
-    
+  }, 500);
+}
 
-  }
 
   // 06. Counter active
   if ('counterUp' in window) {
